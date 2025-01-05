@@ -1,0 +1,1510 @@
+@font-face {
+    font-family: "Bison Bold";
+    src: url("fonts/Bison-Bold(PersonalUse).ttf") format("truetype");
+}
+
+
+body {
+    font-family: "Bison Bold";
+    user-select: none;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* background: url("https://media.discordapp.net/attachments/834594473358262273/895951988293005312/sem_titulo-17.PNG?width=1202&height=676"); */
+    background-size: cover;
+    cursor: default;
+    /* display: none; */
+}
+
+
+.barbershop {
+    display: none;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0,0,0,.8) 100%);
+}
+
+.container, .container2 {
+    position: absolute;
+    width: 50vh;
+    height: 80vh;
+    right: 5vh;
+    top: 2.5vh;
+    background: transparent linear-gradient(180deg, #ffffff00 0%, #000000b4 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 30px #000000;
+    padding-bottom: 5vh;
+    transition: transform .2s;
+    transform: perspective(100vh) rotateY(-10deg);
+    border-radius: 3vh 0px 0px 0px;
+
+    display: none;
+}
+
+
+
+.pages-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.page {
+    position: relative;
+    bottom: .15vh;
+}
+
+
+
+
+.top {
+    position: relative;
+    box-shadow: 0px 6px 10px #00000038;
+    border-radius: 3vh 0px 0px 0px;
+    background: transparent linear-gradient(260deg, #242424 0%, #000000 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.85;
+    z-index: 999;
+    width: 100%;
+    height: 18%;
+}
+
+
+
+
+
+.title {
+    position: absolute;
+    left: 0; right: 0;
+    margin: auto;
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 15px #333333E6;
+    font-size: 4.5vh;
+    line-height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title p {
+    margin: 0;
+}
+
+
+
+
+.cam {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    margin: auto;
+    width: 25vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AAA9AA;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,.5) 50%, rgba(0,212,255,0) 100%);
+}
+
+
+.cam svg {
+    position: absolute;
+    left: 0; right: 0;
+    margin: auto;
+    width: 55%;
+    height: 55%;
+    z-index: 999;
+}
+
+
+.arrows {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 65%;
+    height: 50%;
+    font-size: 2.2vh;
+
+}
+
+
+.arrow {
+    position: absolute;
+    transition: font-size .2s;
+    height: fit-content;
+    top: 0; bottom: 0; 
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.arrow:hover {
+    font-size: 2.5vh;
+
+}
+
+.arrow:active {
+    color: white;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.pages > .arrows {
+    color: #AAA9AA;
+    width: 70%;
+}
+
+.cam-container {
+    position: absolute;
+    width: 5.5vh;
+    height: 5.5vh;
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #AAA9AA;
+    overflow: hidden;
+}
+
+.cam-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -7.5vh;
+    font-size: 3vh;
+    width: fit-content;
+    height: 3.5vh;
+    z-index: -1;
+    transition: left .5s;
+    transform: translateX(-1vh);
+    z-index: 999;
+    color: #AAA9AA;;
+}
+
+
+.cam-icon svg, .cam-icon i {
+    margin: 2vh;
+    position: relative;
+    width: 3.5vh;
+    height: 3.5vh;
+    z-index: 999;
+    fill: #AAA9AA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.middle {
+    position: absolute;
+    width: 95%;
+    height: 73%;
+    left: 0; right: 0;
+    top: 18%;
+    margin: auto;
+    transition: transform .5s, left .5s, right .5s, opacity .5s;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+
+
+
+
+.component-title {
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    color: white;
+    font-size: 2.5vh;
+    padding: .5vh 10vh;
+    display: flex;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,.5) 50%, rgba(0,212,255,0) 100%);
+
+}
+
+.component-title p {
+    margin: 0;
+}
+
+
+
+.heritage-img {
+    width: 30vh;
+    height: 35vh;
+    margin: 1vh auto;
+    border-radius: 1vh;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,.5) 50%, rgba(0,212,255,0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.shapeFirst, .shapeSecond {
+    position: relative;
+    height: 90%;
+}
+
+.shapeSecond {
+    right: 2vh;
+}
+
+.shapeFirst {
+    left: 2vh;
+    z-index: 999;
+}
+
+.shape-color-buttons {
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2vh;
+    text-shadow: black 1px 1px 3px;
+}
+
+.shape-color-buttons button {
+    margin: 0 .5vh !important;
+}
+
+
+.shape-color-buttons p {
+    margin: 0 .5vh;
+    width: 1vh;
+    height: 2.3vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1vh 1.9vh;
+    border-radius: 1vh;
+    border: 1px solid rgba(255, 255, 255, .5);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shape-color-buttons p:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.option-select, .color-select {
+    position: relative;
+    width: 13vh;
+    height: 13vh;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,.5) 50%, rgba(0,0,0,.25) 90%, rgba(0,212,255,0) 100%);
+    /* border: 1px solid rgba(255, 255, 255, .3); */
+    border-radius: 1vh;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-select {
+    width: 4vh;
+    height: 4vh;
+}
+
+.color-select .fa-times {
+    color: red;
+    font-size: 3vh;
+}
+
+.option-select:hover, .color-select:hover {
+    filter: brightness(1.2);
+}
+
+.option-select img {
+    width: 100%;
+}
+
+
+.option-selected, .color-selected {
+    border: 1px solid rgba(255, 255, 255, 1);
+    filter: brightness(1.2);
+}
+
+
+.option-checked, .color-checked {
+    position: absolute;
+    left: .5vh;
+    top: .5vh;
+    font-size: 2vh;
+    color: white;
+    text-shadow: black 1px 1px 3px;
+}
+
+.color-checked {
+    font-size: 2vh;
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+
+.option-price, .option-index {
+    position: absolute;
+    left: .5vh; bottom: .5vh;
+    margin: auto;
+    color: white;
+    width: fit-content;
+    text-align: center;
+    height: fit-content;
+    font-size: 1.7vh;
+    padding: .3vh 1vh;
+    border-radius: 2vh;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,.4) 10%, rgba(0,0,0,.5) 50%, rgba(0,0,0,.4) 90%, rgba(0,212,255,0) 100%);
+}
+
+.option-index {
+    left: auto; right: .5vh; top: .5vh; bottom: auto;
+}
+
+.option-price {
+    transition: opacity .2s;
+    opacity: 0;
+}
+
+
+.option-select:hover > .option-price, .option-selected > .option-price {
+    opacity: 1;
+}
+
+
+.color-grid, .option-grid {
+    display: grid;
+    grid-template-columns: 15vh 15vh 15vh;
+    grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh 15vh;
+    align-items: center;
+    justify-items: center;
+    row-gap: 1vh;
+    column-gap: 1vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* padding: 2vh; */
+    
+}
+
+.option-grid {
+    grid-auto-rows: 1fr;
+    grid-template-rows: none;
+    align-items: initial;
+}
+
+.color-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+.confirm-button {
+    position: absolute;
+    left: 0; right: 0; bottom: .5vh;
+    margin: auto;
+    color: white;
+    font-size: 6vh;
+    width: fit-content;
+    height: fit-content;
+    transition: color .5s;
+}
+
+.confirm-button:hover {
+    color: #73C76A;
+}
+
+
+
+.opacity-slider {
+    background: transparent;
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    left: 0; right: 0; bottom: 11vh;
+    margin: auto;
+    color: rgba(255, 255, 255, .5);
+    font-size: 2.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skin-options {
+    justify-content: initial;
+    overflow: auto;
+}
+
+
+
+.opacity-slider p {
+    margin: 1vh 0;
+}
+.opacity-slider input {
+    position: relative;
+    margin: auto !important;
+    width: 30vh !important;
+    background: transparent;
+}
+
+
+.skin-options .opacity-slider {
+    position: relative;
+    bottom: 0;
+    font-size: 1.8vh;
+    
+}
+
+.skin-options .opacity-slider input {
+    width: 25vh !important;
+}
+
+
+.select-parent, .select-color {
+    position: relative;
+    color: white;
+    background: #131313A3 0% 0% no-repeat padding-box;
+    margin: auto 1vh;
+    font-family: "Bison Bold";
+    outline: none;
+    transition: transform .2s;
+    border: 1px solid #6a9ac7;
+    border-radius: 2vh;
+    width: 15vh;
+    height: 4.5vh;
+    font-size: 2vh;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.select-parent:active, .select-color:active {
+    transform: scale(1.1);
+}
+
+
+.select-parent:hover::after, .select-color:hover::after {
+    width: 100%;
+}
+
+.select-parent::after, .select-color::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    height: 100%;
+    width: 0%;
+    background: #6a9ac7;
+    transition: width .15s;
+}
+
+.select-parent p, .select-color p, .select-color i {
+    position: relative;
+    margin: 0;
+    z-index: 999;
+}
+
+
+.select-color svg {
+    width: 10vh;
+    height: 10vh;
+    fill: white;
+    z-index: 999;
+}
+
+.select-color path {
+    fill: white;
+    /* filter: drop-shadow(1vh 1vh 10px white); */
+}
+
+.icon-shadow path {
+    filter: drop-shadow(1vh 1vh 10px white);
+}
+
+
+.select-color {
+    background-color: rgb(28, 31, 33);
+    width: 5vh;
+    border-radius: 1vh;
+    text-shadow: black 1px 1px 3px;
+    margin: 1vh 2vh !important;
+    border: solid 1px rgba(255, 255, 255, .5);
+}
+
+
+.select-shape {
+    background: transparent;
+}
+.slider-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    color: white;
+    font-size: 2.5vh;
+}
+
+.slider-container i {
+    margin: auto 1vh;
+}
+
+
+
+.slider {
+    position: relative;
+    margin: .5vh auto !important;
+    width: 25vh !important;
+    height: 1vh;
+    /* border-radius: 30vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,.1) 10%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.1) 90%, rgba(0,212,255,0) 100%);
+    /* border: 2px solid #42424231; */
+}
+
+
+input[type=range] {
+    height: .6vh;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.6vh;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 3px #9e9e9e5e;
+    background: #242424;
+    border: 1px solid #2c2c2c;
+  }
+
+  .opacity-slider input[type=range]::-webkit-slider-runnable-track {
+    background: transparent;
+  }
+
+
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 3px 3px 3px #00000050;
+    border: 2px solid #9b9b9b;
+    height: 1.5vh;
+    width: 1.5vh;
+    background: #252525;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -0.5vh;
+  }
+
+  input[type=range]::-webkit-slider-thumb:active, input[type=range]::-webkit-slider-thumb:hover {
+    background: #242424;
+    border-color: rgb(255, 255, 255);
+  }
+
+
+
+.perc {
+    font-size: 2vh;
+    width: 4vh;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.component {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: rgba(255, 255, 255, 0.836);
+    font-size: 3.1vh;
+    text-shadow: 0px 0px 5px #8d8d8d2a;
+    box-shadow: 0px 0px 20px #00000045;
+    /* background: transparent linear-gradient(260deg, #242424 0%, #000000 100%) 0% 0% no-repeat padding-box; */
+    transition: transform .2s, box-shadow .2s, color .2s;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    filter: contrast(110%);
+}
+
+.component:hover {
+    transform: scale(1.1);
+    z-index: 999;
+    color: rgb(255, 218, 169);
+}
+
+
+.component:active {
+    box-shadow: 0px 0px 10px #ffffff86;
+}
+
+.component-blocked:active {
+    box-shadow: none;
+}
+
+.component p {
+    position: absolute;
+    bottom: 0; right: 0;
+    margin: 3%;
+    text-shadow: .1vh .1vh .5vh black;
+}
+
+
+.component-blocked {
+    transform: scale(1) !important;
+    box-shadow: none !important;
+}
+
+
+.blocked {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 2vh;
+    background: rgba(255, 255, 255, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocked i {
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 5%;
+}
+
+
+
+.page-one {
+    display: grid;
+    grid-template-areas: "hair hair hair"
+                         "eyebrows eyebrows eyes"
+                         "facialHair facialHair chestHair"
+                         "makeup skin chestHair";
+
+    column-gap: .5vh;
+    row-gap: .5vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+
+.page-two {
+    display: grid;
+    grid-template-areas: "hair hair"
+                         "hair-color hair-highlightcolor"
+                         "overlay overlay";
+
+    column-gap: .5vh;
+    row-gap: .5vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.page-three {
+    display: grid;
+    grid-template-areas: "eyebrows"
+                         "eyebrows-color";
+
+    column-gap: .5vh;
+    row-gap: .5vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.page-four {
+    display: grid;
+    grid-template-areas: "blush"
+                         "lipstick"
+                         "makeup";
+
+    column-gap: .5vh;
+    row-gap: .5vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.page-five {
+    display: grid;
+    grid-template-areas: "blush"
+                         "blushColor";
+
+    column-gap: .5vh;
+    row-gap: .5vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.page-six {
+    display: grid;
+    grid-template-areas: "lipstick"
+                         "lipstickColor";
+
+    column-gap: .5vh;
+    row-gap: .5vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.page-seven {
+    display: grid;
+    grid-template-areas: "makeup"
+                         "makeupColor";
+
+    column-gap: .5vh;
+    row-gap: .5vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.page-eight {
+    display: grid;
+    grid-template-areas: "facialHair"
+                         "facialHairColor";
+
+    column-gap: .5vh;
+    row-gap: .5vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.page-nine {
+    display: grid;
+    grid-template-areas: "chestHair"
+                         "chestHairColor";
+
+    column-gap: .5vh;
+    row-gap: .5vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+
+.hair, .hair-section {grid-area: hair;}
+.hair-color{ grid-area: hair-color; }
+.hair-highlightcolor{ grid-area: hair-highlightcolor; }
+.overlay{ grid-area: overlay; }
+.eyebrows, .eyebrows-section {grid-area: eyebrows;}
+.eyebrows-color {grid-area: eyebrows-color;}
+.eyes {grid-area: eyes;}
+.makeup, .makeup-section {grid-area: makeup;}
+.makeup-color {grid-area: makeupColor;}
+.blush, .blush-section {grid-area: blush;}
+.blush-color {grid-area: blushColor;}
+.lipstick, .lipstick-section {grid-area: lipstick;}
+.lipstick-color {grid-area: lipstickColor;}
+.facialHair, .facialHair-section {grid-area: facialHair;}
+.facialHair-color {grid-area: facialHairColor;}
+.chestHair, .chestHair-section {grid-area: chestHair;}
+.chestHair-color {grid-area: chestHairColor;}
+.skin {grid-area: skin;}
+
+
+
+
+
+
+
+
+
+.page-two, .page-three, .page-four, .page-five, .page-six, .page-seven, .page-eight, .page-nine {
+    transform: translateX(50vh);
+    opacity: 0;
+}
+
+
+
+
+.page-one, .page-two-passed, .page-three-passed, .page-four-passed, .page-five-passed, .page-six-passed, .page-seven-passed, .page-eight-passed, .page-nine-passed {
+    transform: translateX(-50vh);
+    opacity: 0;
+}
+
+
+
+.page-one-active, .page-two-active, .page-three-active, .page-four-active, .page-five-active, .page-six-active, .page-seven-active, .page-eight-active, .page-nine-active {
+    transform: translateX(0vh);
+    opacity: 1;
+}
+
+
+
+
+
+
+.bottom {
+    position: absolute;
+    width: 90%;
+    left: 0; right: 0;
+    margin: auto;
+    height: 6vh;
+    bottom: .5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    position: relative;
+    border: 2px solid #73C76A;
+    color: white;
+    height: 70%;
+    border-radius: 3vh;
+    width: 30%;
+    font-size: 2.2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #131313A3 0% 0% no-repeat padding-box;
+    /* opacity: 0.71; */
+    margin: auto;
+    font-family: "Bison Bold";
+    outline: none;
+    transition: transform .2s;
+    overflow: hidden;
+}
+
+.btn p, .btn span {
+    z-index: 999;
+}
+
+
+.value p {
+    margin: 0;
+    position: absolute;
+    transition: opacity .5s;
+    text-shadow: 1px 1px 5px black;
+}
+
+
+
+
+.cancel {
+    border-color: #A42D2D;
+}
+
+.cancel:active, .value:active {
+    transform: scale(1.1);
+}
+
+
+
+.value:hover::after, .cancel:hover::after {
+    width: 100%;
+}
+
+.value::after, .cancel::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    height: 100%;
+    width: 0%;
+    background: #73C76A;
+    transition: width .15s;
+}
+
+.cancel::after {
+    background: #A42D2D;
+}
+
+
+
+#buy {
+    opacity: 0;
+    animation: rotate2 1s forwards;
+}
+
+
+#price {
+    animation: rotate2 .5s forwards;
+}
+
+.value:hover > #price {
+    animation: rotate .5s forwards;
+    opacity: 0;
+}
+
+.value:hover > #buy {
+    animation: rotate .5s forwards;
+    opacity: 1;
+}
+
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotateY(360deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::selection {
+    color: black;
+    background: white;
+  }
+
+
+
+::-webkit-scrollbar {
+    width: .7vh;
+    height: .2vh;
+    border-radius: .2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+ ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #242424;
+    box-shadow: 1px 1px 2px #9e9e9e5e;
+    height: .2vh;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #494949;
+}
+
+ ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(left, #22ADD4, #1E98BA);
+}
+
+
+
+.popup-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+
+.popup {
+    position: absolute;
+    left: 0; top: 0; bottom: 0; right: 0;
+    margin: auto;
+    width: 45vh;
+    height: 30vh;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 2vh rgba(255, 255, 255, 0.295);
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 1s, transform .5s;
+    padding: 3vh;
+}
+
+.popup-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popup-header {
+    top: 0; left: 0;
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    font-size: 3.5vh;
+    text-align: center;
+    background: transparent linear-gradient(260deg, #000000 0%, #242424 100%) 0% 0% no-repeat padding-box;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-header i {
+    position: absolute;
+    right: 1vh; 
+    top: 0; bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    border-radius: 50%;
+    padding: 1% 2.2%;
+    font-size: 3vh;
+}
+
+.popup-text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 2.7vh;
+    top: 35%; left: 0; right: 0;
+    margin: auto;
+    width: 80%;
+    height: 40%;
+}
+
+.popup-text b {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+}
+
+
+.popup-buttons {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-buttons .btn {
+    padding: 5% 0;
+    width: 8vh;
+    font-size: 2.7vh;
+    margin: 0 2vh;
+    background: rgba(0, 0, 0, .85);
+    text-shadow: 1px 1px 3px black;
+    z-index: 9999;
+}
+
+.popup-buttons .btn:active {
+    transform: scale(1.1);
+}
+
+
+.deny {
+    border-color: #A42D2D;
+}
+
+.finish:hover::after, .deny:hover::after {
+    width: 100%;
+}
+
+.finish::after, .deny::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    height: 100%;
+    width: 0%;
+    background: #73C76A;
+    transition: width .15s;
+}
+
+
+.deny::after {
+    background: #A42D2D;
+}
+
+
+
+
+
+
+
+
+.popup-loading {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent linear-gradient(260deg, #000000 0%, #242424 100%) 0% 0% no-repeat padding-box;
+    color: black;
+    font-size: 2.4vh;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .3s;
+    left: 0; top: 0;
+}
+
+
+.popup-loading-active {
+    z-index: 99999;
+    opacity: 1;
+}
+
+.popup-loading i {
+    color: white;
+    position: absolute;
+    left: 0; top: 0; bottom: 0; right: 0;
+    margin: auto;
+    font-size: 9vh;
+    width: fit-content;
+    height: fit-content;
+    z-index: 999999;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .3s, transform .3s;
+
+}
+
+
+.popup-loading p {
+    position: absolute;
+    font-size: 3vh;
+    color: white;
+    left: 0; top: 0; bottom: 0; right: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    transform: translateY(7vh);
+}
+
+.icon-active {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    animation: rotate2 1s forwards;
+    z-index: 999999;
+}
+
+
+.fail .icon-active {
+    transform: scale(1) translateY(-3vh) !important;
+}
+
+.lds-ring {
+    display: block;
+    position: relative;
+    width: 8vh;
+    height: 8vh;
+    display: none;
+}
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 6.4vh;
+    height: 6.4vh;
+    margin: .8vh;
+    border: .8vh solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+
+
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+
+.rotate {
+    position: relative;
+    opacity: .6;
+    margin: auto;
+    width: 30%;
+    height: 3.9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vh;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, .5);
+
+    /* background: #000000b4; */
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,.6) 10%, rgba(0,0,0,.9) 50%, rgba(0,0,0,.6) 90%, rgba(0,212,255,0) 100%);
+    border-radius:  3vh;
+}
+
+
+.rotate svg {
+    width: 70%;
+    height: 70%;
+}
+
+.rotate p {
+    margin: 0 1.2vh;
+}
+
+.rotate path {
+    fill: white;
+}
+
+
+
+
+
+.hair-opacity,.opacity-slider.hair-highlightcolor {
+    display: none !important;
+}
+
+
+
+.hair-section {
+    background-size: 45vh;
+    background-position: 45vh 25vh;
+}
+
+.component.hair {
+    background-size: 60vh;
+    background-position: 50vh 33vh;
+}
+
+.component.hair.male {
+    background-size: 60vh;
+    background-position: 50vh 31.5vh;
+}
+
+.component.overlay {
+    background-size: 80vh;
+    background-position: 60vh 43vh;
+}
+
+.component.overlay.male {
+    background-size: 80vh;
+    background-position: 60vh 38vh;
+}
+
+.component.hair-color, .component.hair-highlightcolor {
+    background-size: 60vh;
+    background-position: 40vh 33vh;
+}
+
+.component.eyebrows,.component.eyebrows-color,.component.makeup,.component.makeup-color {
+    background-size: 150vh;
+    background-position: 95vh 75vh;
+}
+
+.component.eyebrows.male,.component.eyebrows-color.male,.component.makeup.male,.component.makeup-color.male {
+    background-size: 150vh;
+    background-position: 95vh 70vh;
+}
+
+.component.makeup.male,.component.makeup-color.male {
+    background-size: 100vh;
+    background-position: 71vh 41vh;
+}
+
+.component.facialHair,.component.facialHair-color {
+    background-size: 150vh;
+    background-position: 95vh 50vh;
+}
+
+.component.facialHair.male,.component.facialHair-color.male {
+    background-size: 150vh;
+    background-position: 95vh 46vh;
+}
+
+
+.component.chestHair,.component.chestHair-color {
+    background-size: 100vh;
+    background-position: 74vh 34vh;
+}
+
+.component.chestHair.male,.component.chestHair-color.male {
+    background-size: 100vh;
+    background-position: 76vh 34vh;
+}
+
+.component.lipstick,.component.lipstick-color {
+    background-size: 190vh;
+    background-position: 115vh 60vh;
+}
+
+.component.lipstick.male,.component.lipstick-color.male {
+    background-size: 190vh;
+    background-position: 113.5vh 50vh;
+}
+
+
+
+
+
+
+
+.blush-section {
+    background-size: 150vh;
+    background-position: 95vh 50vh;
+}
+
+.blush, .blush-color {
+    background-size: 150vh;
+    background-position: 95vh 55vh;
+}
+
+.lipstick-section {
+    background-size: 150vh;
+    background-position: 95vh 45vh;
+}
+
+.lipstick-section.male {
+    background-size: 150vh;
+    background-position: 95vh 40vh;
+}
+
+.makeup-section {
+    background-size: 100vh;
+    background-position: 70vh 48vh;
+}
+
+.makeup-section.male {
+    background-size: 70vh;
+    background-position: 57vh 28vh;
+}
+
+.eyebrows-section {
+    background-size: 90vh;
+    background-position: 58vh 42vh;
+}
+
+.eyebrows-section.male {
+    background-size: 90vh;
+    background-position: 58vh 40vh;
+}
+
+.component.eyes {
+    background-size: 90vh;
+    background-position: 58vh 42vh;
+}
+
+.component.eyes.male {
+    background-size: 90vh;
+    background-position: 56.5vh 38.5vh;
+}
+
+.facialHair-section {
+    background-size: 90vh;
+    background-position: 58vh 26vh;
+}
+
+.facialHair-section.male {
+    background-size: 90vh;
+    background-position: 58vh 24.5vh;
+}
+
+.makeups-section {
+    background-size: 90vh;
+    background-position: 58vh 42vh;
+}
+
+.makeups-section.male {
+    background-size: 45vh;
+    background-position: 29.2vh 19vh;
+}
+
+.skin {
+    background-size: 75vh;
+    background-position: 43.5vh 30vh;
+}
+
+.chestHair-section {
+    background-size: 75vh;
+    background-position: 45.5vh 31.5vh;
+}
+
+.chestHair-section.male {
+    background-size: 75vh;
+    background-position: 46.8vh 31.5vh;
+}
+
+
+.component::after {
+    content: "";
+    position: absolute;
+    width: 100%; height: 100%;
+    background-color: #0000003b;
+    filter: contrast(60%);
+}
+
+
+@media (max-aspect-ratio: 3/2) {
+    .container, .container2  {
+        width: 48.5vh;
+        zoom: .6;
+        top: 40vh;
+    }
+}
+
